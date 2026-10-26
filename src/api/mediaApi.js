@@ -18,8 +18,8 @@ export async function fetch_photos(searchText) {
         })
         let response = res.data.results
         return response;
-    } catch {
-        console.error("UnSplash API error:", error.response?.data || error.message);
+    } catch (error) {
+        console.error("UnSplash API error:", error.response?.data?.errors[0] || error.message);
         throw error;
     }
 }
@@ -35,7 +35,7 @@ export async function fetch_gif(searchText) {
         })
         let response = res.data
         return response;
-    } catch {
+    } catch (error) {
         console.error("GIPHY API error:", error.response?.data || error.message);
         throw error;
     }
