@@ -1,5 +1,7 @@
 import { fetch_photos, fetch_gif, fetch_videos } from './api/mediaApi'
 import SearchBar from './components/SearchBar';
+import TabsComponent from './components/Tabs';
+
 const App = () => {
 
   let getPhotos = async () => {
@@ -19,9 +21,10 @@ const App = () => {
   }
   return (
     <>
-      <div>
+      <div className='bg-gray-900 text-white h-screen w-full'>
         <SearchBar />
-      </div> 
+        <TabsComponent />
+      </div>
     </>
   )
 }

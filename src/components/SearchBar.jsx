@@ -7,17 +7,10 @@ const SearchBar = () => {
     const [text, setText] = useState('')
 
     const submitForm = (e) => {
-
-        console.log(e);
-        
         e.preventDefault();
-        console.log(text);
-        
         dispatch(setQuery(text))
         setText('');
     }
-
-
 
     return (
         <form onSubmit={submitForm} className='flex  bg-(--c1) gap-5 py-10 px-10'>
