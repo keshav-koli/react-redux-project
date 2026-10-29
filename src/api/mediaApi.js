@@ -33,7 +33,7 @@ export async function fetch_gif(searchText) {
                 api_key: giphyKey
             },
         })
-        let response = res.data
+        let response = res.data.data
         return response;
     } catch (error) {
         console.error("GIPHY API error:", error.response?.data || error.message);
